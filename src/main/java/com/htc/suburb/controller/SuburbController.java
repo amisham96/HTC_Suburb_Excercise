@@ -2,7 +2,6 @@ package com.htc.suburb.controller;
 
 import java.util.List;
 
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,9 +23,6 @@ public class SuburbController {
 
 	@Autowired
 	SuburbService suburbService;
-
-	@Autowired
-	ModelMapper modelMapper;
 
 	@PostMapping("/addsuburb")
 	public List<Suburb> addSuburb(@RequestBody List<Suburb> suburb) throws SuburbApplicationException {

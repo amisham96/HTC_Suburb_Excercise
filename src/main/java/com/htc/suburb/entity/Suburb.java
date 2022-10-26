@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "suburb")
-public class Suburb implements Comparator<Suburb>{
+public class Suburb {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -60,10 +60,5 @@ public class Suburb implements Comparator<Suburb>{
 		this.postcode = postcode;
 	}
 
-	@Override
-	public int compare(Suburb o1, Suburb o2) {
-		// TODO Auto-generated method stub
-		return o1.suburbName.compareTo(o2.suburbName);
-	}
 	
 }
